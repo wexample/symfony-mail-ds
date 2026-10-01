@@ -11,6 +11,7 @@ use Wexample\SymfonyDesignSystem\Attribute\MenuItem;
 use Wexample\SymfonyLoader\Controller\AbstractPagesController;
 use Wexample\SymfonyMail\Class\MailboxMail;
 use Wexample\SymfonyMail\Service\MailboxService;
+use Wexample\SymfonyMail\Twig\MailExtension;
 use Wexample\SymfonyMailDs\Traits\SymfonyMailDsBundleClassTrait;
 
 /**
@@ -29,7 +30,7 @@ final class MailboxController extends AbstractPagesController
      */
     public const string MENU_GROUP = 'mail';
 
-    public const string ROUTE_INDEX = 'mailbox_index';
+    public const string ROUTE_INDEX = MailExtension::ROUTE_MAILBOX;
 
     public const string ROUTE_HTML = 'mailbox_html';
 
