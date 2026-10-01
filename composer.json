@@ -1,11 +1,39 @@
 {
   "name": "wexample/symfony-mail-ds",
+  "description": "Design-system screens for symfony-mail: the development mailbox",
   "version": "1.0.1",
   "type": "library",
   "license": "MIT",
   "autoload": {
     "psr-4": {
       "Wexample\\SymfonyMailDs\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "weeger",
+      "email": "romain.weeger@wexample.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.5",
+    "wexample/symfony-design-system": ">=23.0.0",
+    "wexample/symfony-helpers": ">=12.0.0",
+    "wexample/symfony-loader": ">=15.0.0",
+    "wexample/symfony-mail": ">=1.0.1"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../*",
+      "options": {
+        "symlink": true
+      }
+    }
+  ],
+  "extra": {
+    "install": {
+      "bundle_env": "all"
     }
   }
 }
