@@ -1,0 +1,25 @@
+// The development mailbox: the list on one side, the mail read on the other.
+@use '@wexample/symfony-design-system/components/list-expanded/list-expanded';
+@use '@wexample/symfony-design-system/components/bar/bar';
+
+.mailbox {
+  height: 70vh;
+}
+
+// The row of the mail being read stays marked while the focus moves on.
+.mailbox .list-expanded--items > [aria-current='true'] {
+  background: var(--state-active);
+}
+
+// An iframe takes the height of its box: the box gives it one.
+.mailbox--body {
+  height: 32rem;
+}
+
+.mailbox--text {
+  white-space: pre-wrap;
+}
+
+.mailbox--links {
+  overflow-wrap: anywhere;
+}
