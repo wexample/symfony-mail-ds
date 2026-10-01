@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Attribute\Route;
+use Wexample\SymfonyDesignSystem\Attribute\MenuItem;
 use Wexample\SymfonyLoader\Controller\AbstractPagesController;
 use Wexample\SymfonyMail\Class\MailboxMail;
 use Wexample\SymfonyMail\Service\MailboxService;
@@ -23,6 +24,11 @@ final class MailboxController extends AbstractPagesController
 {
     use SymfonyMailDsBundleClassTrait;
 
+    /**
+     * The menu group of the mail pages: the mailbox, and the demo sending into it.
+     */
+    public const string MENU_GROUP = 'mail';
+
     public const string ROUTE_INDEX = 'mailbox_index';
 
     public const string ROUTE_HTML = 'mailbox_html';
@@ -38,6 +44,7 @@ final class MailboxController extends AbstractPagesController
     private const string QUERY_ID = 'id';
 
     #[Route(path: '', name: 'index')]
+    #[MenuItem(self::MENU_GROUP, 0)]
     public function index(
         Request $request,
         MailboxService $mailbox
