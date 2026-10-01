@@ -1,6 +1,7 @@
 // The development mailbox: the list on one side, the mail read on the other.
 @use '@wexample/symfony-design-system/components/list-expanded/list-expanded';
 @use '@wexample/symfony-design-system/components/bar/bar';
+@use '@wexample/symfony-design-system/components/document-embed/document-embed';
 
 .mailbox {
   height: 70vh;
@@ -11,9 +12,10 @@
   background: var(--state-active);
 }
 
-// An iframe takes the height of its box: the box gives it one.
+// An iframe takes the height of its box: the box gives it one, as tall as
+// the reading pane allows.
 .mailbox--body {
-  height: 32rem;
+  height: max(32rem, 60vh);
 }
 
 .mailbox--text {

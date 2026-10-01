@@ -67,7 +67,9 @@ final class MailboxController extends AbstractPagesController
      * an origin of its own, without scripts or forms: a mail's HTML neither
      * wears the application's styles nor runs as the application.
      */
-    #[Route(path: '{id}/html', name: 'html', requirements: ['id' => MailboxService::ID_REQUIREMENT])]
+    // Not an application page: the debug toolbar, which only dresses `html`
+    // requests, stays out of the mail.
+    #[Route(path: '{id}/html', name: 'html', requirements: ['id' => MailboxService::ID_REQUIREMENT], format: 'mail')]
     public function html(
         string $id,
         MailboxService $mailbox
