@@ -3,7 +3,8 @@
 {%- set page_show_title = true -%}
 
 {%- block page_body -%}
-    <p class="lead">{{ '@page::intro' | trans }}</p>
+    {#- Said loud: a visitor landing here must not take it for the product. -#}
+    {{ message_warning('@page::dev.title', '@page::intro', { icon: 'ph:bold/code' }) }}
 
     <div class="toolbar">
         {%- set recipient_items = [{

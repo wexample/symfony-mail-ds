@@ -1,7 +1,9 @@
 en:
   page_title: Mailbox
   page_icon: ph:bold/envelope-simple
-  intro: The mails this application sent while in development, newest first. None of them left the machine.
+  dev:
+    title: Development mailbox — not part of the application
+  intro: A development and test tool, absent in production. It shows the mails this application sent, newest first; none of them left the machine. Real users receive theirs in their own mailbox.
   empty: No mail yet.
   not_found: This mail is no longer in the mailbox.
   no_subject: (no subject)
@@ -23,7 +25,9 @@ en:
 fr:
   page_title: Boîte mail
   page_icon: ph:bold/envelope-simple
-  intro: "Les mails envoyés par cette application en développement, les plus récents d'abord. Aucun n'a quitté la machine."
+  dev:
+    title: "Boîte mail de développement — ne fait pas partie de l'application"
+  intro: "Un outil de développement et de test, absent en production. Elle montre les mails envoyés par cette application, les plus récents d'abord ; aucun n'a quitté la machine. Les vrais utilisateurs reçoivent les leurs dans leur propre boîte."
   empty: "Aucun mail pour l'instant."
   not_found: "Ce mail n'est plus dans la boîte."
   no_subject: (sans objet)
