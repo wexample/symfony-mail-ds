@@ -43,7 +43,7 @@
                         {{ bar(mail.subject ?? '@page::no_subject' | trans, {
                             icon: mail.attachments is empty ? 'ph:bold/envelope-simple' : 'ph:bold/paperclip',
                             subtitle: mail.recipients | join(', '),
-                            trailing: date_display(mail.date, 'date_time_short'),
+                            meta: date_display(mail.date, 'date_time_short'),
                             href: path('mailbox_index', { id: mail.id, to: recipient }),
                             class: 'list-expanded--item',
                             attr: {
