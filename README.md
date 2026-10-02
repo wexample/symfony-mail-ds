@@ -1,6 +1,6 @@
 # symfony-mail-ds
 
-Version: 2.0.0
+Version: 2.0.1
 
 Design-system screens for symfony-mail: the development mailbox
 
@@ -26,9 +26,9 @@ Visit the [Wexample Suite documentation](https://docs.wexample.com) for the comp
 ## Dependencies
 
 - php: >=8.5
-- wexample/symfony-design-system: >=25.0.0
+- wexample/symfony-design-system: >=26.0.0
 - wexample/symfony-helpers: >=12.0.0
-- wexample/symfony-loader: >=16.0.0
+- wexample/symfony-loader: >=17.0.0
 - wexample/symfony-mail: >=2.0.0
 
 ## Versioning & Compatibility Policy
