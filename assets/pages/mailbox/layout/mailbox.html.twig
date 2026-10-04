@@ -1,0 +1,149 @@
+{#- A mailbox: the mails on one side, the one being read on the other, two
+    regions of the page each sized by the visitor. A page built on it gives
+    `mails`, `selected`, and the routes reaching a mail (`mailbox_route`), its
+    HTML body (`mailbox_route_html`) and its source (`mailbox_route_raw`); the
+    application's layout it stands in is `mailbox_layout`.
+
+    `mailbox_dev` makes it the development mailbox: said so at the toolbar's
+    start, with the choice of a recipient and the purge at its end, which then
+    needs `recipient` and `recipients`. -#}
+{%- extends mailbox_layout|default('@front/layouts/private/layout.html.twig') -%}
+
+{#- The panes are the page: no title over them. -#}
+{%- set page_show_title = false -%}
+{%- set page_zone_resizable = 'mailbox.mail' -%}
+
+{%- set mailbox_domain = 'WexampleSymfonyMailDsBundle.pages.mailbox.layout.mailbox::' -%}
+{%- set mailbox_route = mailbox_route|default('mailbox_index') -%}
+{%- set mailbox_route_html = mailbox_route_html|default('mailbox_html') -%}
+{%- set mailbox_route_raw = mailbox_route_raw|default('mailbox_raw') -%}
+
+{%- block page_toolbar_left -%}
+    {%- if mailbox_dev|default(false) -%}
+        {#- Said where it is always in sight: a visitor landing here must not
+            take it for the product. -#}
+        {{ marker('dev', (mailbox_domain ~ 'dev.marker') | trans, {
+            glyph: 'ph:bold/code',
+            title: (mailbox_domain ~ 'dev.intro') | trans,
+        }) }}
+        <span class="mailbox--dev-title" title="{{ (mailbox_domain ~ 'dev.intro') | trans }}">{{ (mailbox_domain ~ 'dev.title') | trans }}</span>
+    {%- endif -%}
+{%- endblock -%}
+
+{%- block page_toolbar_right -%}
+    {%- if mailbox_dev|default(false) -%}
+        {%- set recipient_items = [{
+            label: (mailbox_domain ~ 'filter.all') | trans,
+            href: path(mailbox_route),
+            checked: recipient is null,
+            radio: true,
+        }] -%}
+        {%- for address in recipients -%}
+            {%- set recipient_items = recipient_items | merge([{
+                label: address,
+                href: path(mailbox_route, { to: address }),
+                checked: address == recipient,
+                radio: true,
+            }]) -%}
+        {%- endfor -%}
+        {{ button_menu('ph:bold/funnel', recipient ?? (mailbox_domain ~ 'filter.all') | trans, recipient_items, {
+            class: 'button--flat',
+            menu_align: 'right',
+        }) }}
+
+        {%- if mails is not empty -%}
+            <form method="post" action="{{ path('mailbox_purge') }}"
+                  data-confirm-message="{{ (mailbox_domain ~ 'dev.purge_confirm') | trans }}">
+                <input type="hidden" name="_token" value="{{ csrf_token('mailbox_purge') }}">
+                {{ button('ph:bold/trash', (mailbox_domain ~ 'dev.purge') | trans, { type: 'submit', class: 'button--flat' }) }}
+            </form>
+        {%- endif -%}
+    {%- endif -%}
+{%- endblock -%}
+
+{#- The mails, newest first: a narrow region before the page's own. -#}
+{%- block page_zones_before -%}
+    <div class="zone zone--panel zone--narrow zone--size-7 mailbox--list" {{ zone_state('mailbox.list') }}>
+        {{ component(render_pass, '@WexampleSymfonyDesignSystemBundle/components/zone-resizer') }}
+        <div class="zone zone--scrollable list-expanded">
+            {%- if mails is empty -%}
+                <div class="zone--content empty">{{ (mailbox_domain ~ 'empty') | trans }}</div>
+            {%- else -%}
+                <div class="list-expanded--items">
+                    {%- for mail in mails -%}
+                        {{ bar(mail.subject ?? (mailbox_domain ~ 'no_subject') | trans, {
+                            icon: mail.attachments is empty ? 'ph:bold/envelope-simple' : 'ph:bold/paperclip',
+                            subtitle: mail.recipients | join(', '),
+                            meta: date_display(mail.date, 'date_time_short'),
+                            href: path(mailbox_route, { id: mail.id, to: recipient|default(null) }),
+                            class: 'list-expanded--item',
+                            attr: {
+                                'data-list-expanded-item': '',
+                                'aria-current': selected and selected.id == mail.id ? 'true' : null,
+                            },
+                        }) }}
+                    {%- endfor -%}
+                </div>
+            {%- endif -%}
+        </div>
+    </div>
+{%- endblock -%}
+
+{#- The mail being read: the page's own region, at the reading measure. -#}
+{%- block page_body -%}
+    {%- if selected -%}
+        <h2 class="mailbox--subject">{{ selected.subject ?? (mailbox_domain ~ 'no_subject') | trans }}</h2>
+        {%- set headers = [
+            { key: (mailbox_domain ~ 'field.from') | trans, value: selected.from | join(', ') },
+            { key: (mailbox_domain ~ 'field.to') | trans, value: selected.to | join(', ') },
+        ] -%}
+        {%- if selected.cc is not empty -%}
+            {%- set headers = headers | merge([{ key: (mailbox_domain ~ 'field.cc') | trans, value: selected.cc | join(', ') }]) -%}
+        {%- endif -%}
+        {%- set headers = headers | merge([
+            { key: (mailbox_domain ~ 'field.delivered_to') | trans, value: selected.recipients | join(', ') },
+            { key: (mailbox_domain ~ 'field.date') | trans, value: date_display(selected.date, 'date_time_short'), html: true },
+        ]) -%}
+        {{ properties(headers, { compact: true }) }}
+
+        {%- if selected.html is not null -%}
+            {#- Served apart, sandboxed: a mail's HTML neither wears the
+                application's styles nor runs as the application. -#}
+            <div class="mailbox--body">
+                {{ document_embed(path(mailbox_route_html, { id: selected.id }), selected.subject ?? '', { loading: 'eager' }) }}
+            </div>
+        {%- elseif selected.text is not null -%}
+            <pre class="mailbox--text">{{ selected.text }}</pre>
+        {%- endif -%}
+
+        {%- if selected.links is not empty -%}
+            <h3>{{ (mailbox_domain ~ 'field.links') | trans }}</h3>
+            <ul class="mailbox--links">
+                {%- for link in selected.links -%}
+                    <li>{{ text_link(link, link, { external: true }) }}</li>
+                {%- endfor -%}
+            </ul>
+        {%- endif -%}
+
+        {%- if selected.attachments is not empty -%}
+            <h3>{{ (mailbox_domain ~ 'field.attachments') | trans }}</h3>
+            <div class="stack--vertical">
+                {%- for attachment in selected.attachments -%}
+                    {{ bar(attachment.name ?? (mailbox_domain ~ 'no_name') | trans, {
+                        icon: 'ph:bold/paperclip',
+                        subtitle: attachment.content_type,
+                        trailing: attachment.size | file_bytes,
+                    }) }}
+                {%- endfor -%}
+            </div>
+        {%- endif -%}
+    {%- elseif mails is not empty -%}
+        <div class="empty">{{ (mailbox_domain ~ 'not_found') | trans }}</div>
+    {%- endif -%}
+{%- endblock -%}
+
+{%- block page_actions -%}
+    {%- if selected -%}
+        {{ button_link('ph:bold/download-simple', (mailbox_domain ~ 'action.raw') | trans, path(mailbox_route_raw, { id: selected.id }), { class: 'button--flat' }) }}
+    {%- endif -%}
+{%- endblock -%}

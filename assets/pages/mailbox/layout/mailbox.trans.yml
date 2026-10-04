@@ -1,0 +1,47 @@
+en:
+  empty: No mail yet.
+  not_found: This mail is no longer in the mailbox.
+  no_subject: (no subject)
+  no_name: (no name)
+  filter:
+    all: Every recipient
+  field:
+    from: From
+    to: To
+    cc: Cc
+    delivered_to: Delivered to
+    date: Date
+    links: Links
+    attachments: Attachments
+  action:
+    raw: Download the .eml
+  dev:
+    marker: dev
+    title: Development mailbox — not part of the application
+    intro: A development and test tool, absent in production. It shows the mails this application sent, newest first; none of them left the machine. Real users receive theirs in their own mailbox.
+    purge: Empty the mailbox
+    purge_confirm: Every mail in the mailbox will be deleted.
+
+fr:
+  empty: "Aucun mail pour l'instant."
+  not_found: "Ce mail n'est plus dans la boîte."
+  no_subject: (sans objet)
+  no_name: (sans nom)
+  filter:
+    all: Tous les destinataires
+  field:
+    from: De
+    to: À
+    cc: Cc
+    delivered_to: Remis à
+    date: Date
+    links: Liens
+    attachments: Pièces jointes
+  action:
+    raw: Télécharger le .eml
+  dev:
+    marker: dev
+    title: "Boîte mail de développement — ne fait pas partie de l'application"
+    intro: "Un outil de développement et de test, absent en production. Elle montre les mails envoyés par cette application, les plus récents d'abord ; aucun n'a quitté la machine. Les vrais utilisateurs reçoivent les leurs dans leur propre boîte."
+    purge: Vider la boîte
+    purge_confirm: Tous les mails de la boîte seront supprimés.
