@@ -31,6 +31,9 @@
 {%- endblock -%}
 
 {%- block page_toolbar_right -%}
+    {%- if selected -%}
+        {{ button_link('ph:bold/download-simple', (mailbox_domain ~ 'action.raw') | trans, path(mailbox_route_raw, { id: selected.id })) }}
+    {%- endif -%}
     {%- if mailbox_dev|default(false) -%}
         {%- set recipient_items = [{
             label: (mailbox_domain ~ 'filter.all') | trans,
@@ -47,7 +50,6 @@
             }]) -%}
         {%- endfor -%}
         {{ button_menu('ph:bold/funnel', recipient ?? (mailbox_domain ~ 'filter.all') | trans, recipient_items, {
-            class: 'button--flat',
             menu_align: 'right',
         }) }}
 
@@ -55,7 +57,7 @@
             <form method="post" action="{{ path('mailbox_purge') }}"
                   data-confirm-message="{{ (mailbox_domain ~ 'dev.purge_confirm') | trans }}">
                 <input type="hidden" name="_token" value="{{ csrf_token('mailbox_purge') }}">
-                {{ button('ph:bold/trash', (mailbox_domain ~ 'dev.purge') | trans, { type: 'submit', class: 'button--flat' }) }}
+                {{ button('ph:bold/trash', (mailbox_domain ~ 'dev.purge') | trans, { type: 'submit' }) }}
             </form>
         {%- endif -%}
     {%- endif -%}
@@ -139,11 +141,5 @@
         {%- endif -%}
     {%- elseif mails is not empty -%}
         <div class="empty">{{ (mailbox_domain ~ 'not_found') | trans }}</div>
-    {%- endif -%}
-{%- endblock -%}
-
-{%- block page_actions -%}
-    {%- if selected -%}
-        {{ button_link('ph:bold/download-simple', (mailbox_domain ~ 'action.raw') | trans, path(mailbox_route_raw, { id: selected.id }), { class: 'button--flat' }) }}
     {%- endif -%}
 {%- endblock -%}
