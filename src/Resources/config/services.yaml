@@ -7,3 +7,6 @@ services:
     Wexample\SymfonyMailDs\Controller\:
         resource: '../../Controller/'
         tags: ['controller.service_arguments']
+
+    Wexample\SymfonyMailDs\DevMenu\:
+        resource: '../../DevMenu/'
