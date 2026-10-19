@@ -45,3 +45,51 @@ fr:
     intro: "Un outil de développement et de test, absent en production. Elle montre les mails envoyés par cette application, les plus récents d'abord ; aucun n'a quitté la machine. Les vrais utilisateurs reçoivent les leurs dans leur propre boîte."
     purge: Vider la boîte
     purge_confirm: Tous les mails de la boîte seront supprimés.
+
+zh:
+  empty: 还没有邮件。
+  not_found: 这封邮件不再邮箱中。
+  no_subject: （无主题）
+  no_name: （无发件人）
+  filter:
+    all: 所有收件人
+  field:
+    from: 发件人
+    to: 收件人
+    cc: 抄送
+    delivered_to: 投递至
+    date: 日期
+    links: 链接
+    attachments: 附件
+  action:
+    raw: '下载 .eml 文件'
+  dev:
+    marker: 开发
+    title: '开发邮箱 — 不是应用的一部分'
+    intro: 一个开发和测试工具，在生产环境中缺失。它显示了该应用发送的邮件，最新的在前；这些邮件都没有离开机器。真实用户会在他们自己的邮箱中收到邮件。
+    purge: 清空邮箱
+    purge_confirm: 邮箱中的所有邮件将被删除。
+
+ar:
+  empty: 'لا توجد رسائل بعد.'
+  not_found: 'هذه الرسالة لم تعد موجودة في صندوق البريد.'
+  no_subject: '(بدون موضوع)'
+  no_name: '(بدون اسم)'
+  filter:
+    all: 'كل المستلمين'
+  field:
+    from: من
+    to: إلى
+    cc: نسخة
+    delivered_to: 'تم التسليم إلى'
+    date: التاريخ
+    links: الروابط
+    attachments: المرفقات
+  action:
+    raw: 'تحميل ملف .eml'
+  dev:
+    marker: dev
+    title: 'صندوق بريد التطوير - ليس جزءًا من التطبيق'
+    intro: 'أداة للتطوير والاختبار، غير موجودة في الإنتاج. تظهر الرسائل التي أرسلها هذا التطبيق، الأحدث أولاً؛ لم يغادر أي منها الجهاز. المستخدمون الحقيقيون يتلقون رسائلهم في صندوق بريدهم الخاص.'
+    purge: 'تفريغ صندوق البريد'
+    purge_confirm: 'ستتم حذف كل رسالة في صندوق البريد.'

@@ -5,3 +5,11 @@ en:
 fr:
   page_title: Boîte mail
   page_icon: ph:bold/envelope-simple
+
+zh:
+  page_title: 邮箱
+  page_icon: 'ph:bold/envelope-simple'
+
+ar:
+  page_title: 'صندوق البريد'
+  page_icon: 'ph:bold/envelope-simple'
