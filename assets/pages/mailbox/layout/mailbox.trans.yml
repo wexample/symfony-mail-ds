@@ -93,3 +93,459 @@ ar:
     intro: 'أداة للتطوير والاختبار، غير موجودة في الإنتاج. تظهر الرسائل التي أرسلها هذا التطبيق، الأحدث أولاً؛ لم يغادر أي منها الجهاز. المستخدمون الحقيقيون يتلقون رسائلهم في صندوق بريدهم الخاص.'
     purge: 'تفريغ صندوق البريد'
     purge_confirm: 'ستتم حذف كل رسالة في صندوق البريد.'
+
+hi:
+  empty: 'अभी तक कोई मेल नहीं है।'
+  not_found: 'यह मेल अब मेलबॉक्स में नहीं है।'
+  no_subject: '(कोई विषय नहीं)'
+  no_name: '(कोई नाम नहीं)'
+  filter:
+    all: 'हर प्राप्तकर्ता'
+  field:
+    from: से
+    to: को
+    cc: प्रतिलिपि
+    delivered_to: 'डिलीवर किया गया'
+    date: तारीख
+    links: लिंक
+    attachments: संलग्नक
+  action:
+    raw: '.eml डाउनलोड करें'
+  dev:
+    marker: dev
+    title: 'विकास मेलबॉक्स — अनुप्रयोग का हिस्सा नहीं'
+    intro: 'एक विकास और परीक्षण उपकरण, उत्पादन में अनुपस्थित। यह उन मेल को दिखाता है जो इस अनुप्रयोग ने भेजे, सबसे नए पहले; इनमें से कोई भी मशीन से बाहर नहीं गया। असली उपयोगकर्ता अपने मेल अपने मेलबॉक्स में प्राप्त करते हैं।'
+    purge: 'मेलबॉक्स को खाली करें'
+    purge_confirm: 'मेलबॉक्स में हर मेल हटा दिया जाएगा।'
+
+he:
+  empty: 'עדיין אין דואר.'
+  not_found: 'דואר זה כבר לא בתיבת הדואר.'
+  no_subject: '(אין נושא)'
+  no_name: '(אין שם)'
+  filter:
+    all: 'כל הנמענים'
+  field:
+    from: מאת
+    to: אל
+    cc: עותק
+    delivered_to: 'נמסר ל'
+    date: תאריך
+    links: קישורים
+    attachments: 'קבצים מצורפים'
+  action:
+    raw: 'להוריד את .eml'
+  dev:
+    marker: dev
+    title: 'תיבת דואר לפיתוח — לא חלק מהיישום'
+    intro: 'כלי לפיתוח ולבדיקה, חסר בגרסה החיה. הוא מציג את המיילים שהיישום הזה שלח, מהחדש לישן; אף אחד מהם לא עזב את המחשב. משתמשים אמיתיים מקבלים את שלהם בתיבת הדואר שלהם.'
+    purge: 'רוקן את תיבת הדואר'
+    purge_confirm: 'כל מייל בתיבת הדואר יימחק.'
+
+fa:
+  empty: 'هنوز هیچ ایمیلی وجود ندارد.'
+  not_found: 'این ایمیل دیگر در صندوق ورودی نیست.'
+  no_subject: '(بدون موضوع)'
+  no_name: '(بدون نام)'
+  filter:
+    all: 'هر گیرنده‌ای'
+  field:
+    from: از
+    to: به
+    cc: 'کپی به'
+    delivered_to: 'تحویل به'
+    date: تاریخ
+    links: لینک‌ها
+    attachments: پیوست‌ها
+  action:
+    raw: 'دانلود .eml'
+  dev:
+    marker: توسعه‌دهنده
+    title: 'صندوق ایمیل توسعه — بخشی از برنامه نیست'
+    intro: 'یک ابزار توسعه و آزمایش، که در تولید وجود ندارد. این ایمیل‌هایی را که این برنامه ارسال کرده نشان می‌دهد، جدیدترین‌ها در ابتدا؛ هیچ‌کدام از آن‌ها از دستگاه خارج نشده است. کاربران واقعی ایمیل‌های خود را در صندوق ورودی خود دریافت می‌کنند.'
+    purge: 'صندوق ورودی را خالی کن'
+    purge_confirm: 'هر ایمیل در صندوق ورودی حذف خواهد شد.'
+
+ur:
+  empty: 'ابھی کوئی میل نہیں۔'
+  not_found: 'یہ میل اب میل باکس میں موجود نہیں ہے۔'
+  no_subject: '(کوئی مضمون نہیں)'
+  no_name: '(کوئی نام نہیں)'
+  filter:
+    all: 'ہر وصول کنندہ'
+  field:
+    from: سے
+    to: کو
+    cc: 'سی سی'
+    delivered_to: 'پہنچایا گیا'
+    date: تاریخ
+    links: لنکس
+    attachments: منسلکات
+  action:
+    raw: '.eml ڈاؤن لوڈ کریں'
+  dev:
+    marker: dev
+    title: 'ترقیاتی میل باکس — ایپلیکیشن کا حصہ نہیں'
+    intro: 'یہ ایک ترقیاتی اور جانچ کا ٹول ہے، پیداوار میں موجود نہیں۔ یہ میلیں دکھاتا ہے جو اس ایپلیکیشن نے بھیجی، تازہ ترین پہلے؛ ان میں سے کوئی بھی مشین سے باہر نہیں گئی۔ حقیقی صارفین اپنی میلیں اپنے میل باکس میں وصول کرتے ہیں۔'
+    purge: 'میل باکس خالی کریں'
+    purge_confirm: 'میل باکس میں موجود ہر میل حذف کر دی جائے گی۔'
+
+ja:
+  empty: まだメールはありません。
+  not_found: このメールはもはや受信トレイにはありません。
+  no_subject: (件名なし)
+  no_name: (名前なし)
+  filter:
+    all: すべての受信者
+  field:
+    from: 差出人
+    to: 宛先
+    cc: Cc
+    delivered_to: 配信先
+    date: 日付
+    links: リンク
+    attachments: 添付ファイル
+  action:
+    raw: .emlをダウンロード
+  dev:
+    marker: dev
+    title: '開発用メールボックス — アプリケーションの一部ではありません'
+    intro: '本番環境には存在しない開発およびテストツールです。このアプリケーションが送信したメールを最新のものから表示します; どれも機械の外には出ていません。実際のユーザーは自分の受信トレイで受け取ります。'
+    purge: 受信トレイを空にする
+    purge_confirm: 受信トレイ内のすべてのメールが削除されます。
+
+ko:
+  empty: '아직 메일이 없습니다.'
+  not_found: '이 메일은 더 이상 받은 편지함에 없습니다.'
+  no_subject: '(제목 없음)'
+  no_name: '(이름 없음)'
+  filter:
+    all: '모든 수신자'
+  field:
+    from: '보낸 사람'
+    to: '받는 사람'
+    cc: 참조
+    delivered_to: '배달된 곳'
+    date: 날짜
+    links: 링크
+    attachments: 첨부파일
+  action:
+    raw: '.eml 다운로드'
+  dev:
+    marker: dev
+    title: '개발용 메일박스 — 애플리케이션의 일부가 아님'
+    intro: '생산 환경에는 없는 개발 및 테스트 도구입니다. 이 애플리케이션이 보낸 메일을 최신 순으로 보여줍니다; 이 메일은 모두 기계에서 나가지 않았습니다. 실제 사용자는 자신의 받은 편지함에서 메일을 받습니다.'
+    purge: '메일박스 비우기'
+    purge_confirm: '메일박스의 모든 메일이 삭제됩니다.'
+
+bn:
+  empty: 'আরো কোনো মেইল নেই।'
+  not_found: 'এই মেইলটি আর মেইলবক্সে নেই।'
+  no_subject: '(বিষয় নেই)'
+  no_name: '(নাম নেই)'
+  filter:
+    all: 'প্রত্যেক প্রাপক'
+  field:
+    from: প্রেরক
+    to: প্রাপক
+    cc: সিসি
+    delivered_to: 'বিতরণ করা হয়েছে'
+    date: তারিখ
+    links: লিঙ্কগুলি
+    attachments: সংযুক্তি
+  action:
+    raw: '.eml ডাউনলোড করুন'
+  dev:
+    marker: dev
+    title: 'ডেভেলপমেন্ট মেইলবক্স — অ্যাপ্লিকেশনের অংশ নয়'
+    intro: 'একটি উন্নয়ন ও পরীক্ষার সরঞ্জাম, উৎপাদনে অনুপস্থিত। এটি দেখায় মেইলগুলি যা এই অ্যাপ্লিকেশন পাঠিয়েছে, নতুন থেকে পুরনো; এর মধ্যে কোনোটি মেশিনটি ছেড়ে যায়নি। প্রকৃত ব্যবহারকারীরা তাদের নিজস্ব মেইলবক্সে তাদের মেইল পান।'
+    purge: 'মেইলবক্স খালি করুন'
+    purge_confirm: 'মেইলবক্সের প্রতিটি মেইল মুছে ফেলা হবে।'
+
+th:
+  empty: ยังไม่มีอีเมล
+  not_found: อีเมลนี้ไม่มีในกล่องจดหมายอีกต่อไป
+  no_subject: (ไม่มีหัวข้อ)
+  no_name: (ไม่มีชื่อ)
+  filter:
+    all: ผู้รับทุกคน
+  field:
+    from: จาก
+    to: ถึง
+    cc: Cc
+    delivered_to: จัดส่งถึง
+    date: วันที่
+    links: ลิงก์
+    attachments: ไฟล์แนบ
+  action:
+    raw: 'ดาวน์โหลด .eml'
+  dev:
+    marker: dev
+    title: 'กล่องจดหมายพัฒนา — ไม่เป็นส่วนหนึ่งของแอปพลิเคชัน'
+    intro: 'เครื่องมือพัฒนาและทดสอบ ที่ไม่มีในสภาพการผลิต แสดงอีเมลที่แอปพลิเคชันนี้ส่ง โดยเรียงตามลำดับใหม่สุด; ไม่มีอีเมลใดออกจากเครื่อง ผู้ใช้จริงจะได้รับอีเมลของตนในกล่องจดหมายของตนเอง'
+    purge: ลบกล่องจดหมาย
+    purge_confirm: อีเมลทุกฉบับในกล่องจดหมายจะถูกลบออก
+
+de:
+  empty: 'Noch keine E-Mails.'
+  not_found: 'Diese E-Mail befindet sich nicht mehr im Postfach.'
+  no_subject: '(kein Betreff)'
+  no_name: '(kein Name)'
+  filter:
+    all: 'Jeder Empfänger'
+  field:
+    from: Von
+    to: An
+    cc: Cc
+    delivered_to: 'Zugestellt an'
+    date: Datum
+    links: Links
+    attachments: Anhänge
+  action:
+    raw: 'Die .eml herunterladen'
+  dev:
+    marker: dev
+    title: 'Entwicklungspostfach — kein Teil der Anwendung'
+    intro: 'Ein Entwicklungs- und Testwerkzeug, das in der Produktion nicht vorhanden ist. Es zeigt die E-Mails, die diese Anwendung gesendet hat, die neueste zuerst; keine von ihnen hat die Maschine verlassen. Echte Benutzer erhalten ihre in ihrem eigenen Postfach.'
+    purge: 'Postfach leeren'
+    purge_confirm: 'Jede E-Mail im Postfach wird gelöscht.'
+
+fi:
+  empty: 'Ei vielä postia.'
+  not_found: 'Tätä postia ei ole enää postilaatikossa.'
+  no_subject: '(ei aihetta)'
+  no_name: '(ei nimeä)'
+  filter:
+    all: 'Jokainen vastaanottaja'
+  field:
+    from: Lähettäjä
+    to: Vastaanottaja
+    cc: Cc
+    delivered_to: Toimitettu
+    date: Päivämäärä
+    links: Linkit
+    attachments: Liitteet
+  action:
+    raw: 'Lataa .eml'
+  dev:
+    marker: dev
+    title: 'Kehityspostilaatikko — ei osa sovellusta'
+    intro: 'Kehitys- ja testityökalu, jota ei ole tuotannossa. Se näyttää tämän sovelluksen lähettämät sähköpostit, uusimmat ensin; mikään niistä ei lähtenyt koneelta. Oikeat käyttäjät saavat omansa omaan postilaatikkoonsa.'
+    purge: 'Tyhjennä postilaatikko'
+    purge_confirm: 'Kaikki postit postilaatikossa poistetaan.'
+
+ru:
+  empty: 'Почты еще нет.'
+  not_found: 'Это письмо больше не в почтовом ящике.'
+  no_subject: '(без темы)'
+  no_name: '(без имени)'
+  filter:
+    all: 'Каждый получатель'
+  field:
+    from: От
+    to: Кому
+    cc: Копия
+    delivered_to: 'Доставлено в'
+    date: Дата
+    links: Ссылки
+    attachments: Вложения
+  action:
+    raw: 'Скачать .eml'
+  dev:
+    marker: dev
+    title: 'Почтовый ящик разработчика — не часть приложения'
+    intro: 'Инструмент для разработки и тестирования, отсутствующий в производственной среде. Он показывает письма, отправленные этим приложением, начиная с самых новых; ни одно из них не покинуло машину. Реальные пользователи получают свои письма в своем почтовом ящике.'
+    purge: 'Очистить почтовый ящик'
+    purge_confirm: 'Все письма в почтовом ящике будут удалены.'
+
+pl:
+  empty: 'Brak wiadomości.'
+  not_found: 'Ta wiadomość nie znajduje się już w skrzynce odbiorczej.'
+  no_subject: '(brak tematu)'
+  no_name: '(brak nazwy)'
+  filter:
+    all: 'Wszyscy odbiorcy'
+  field:
+    from: Od
+    to: Do
+    cc: DW
+    delivered_to: 'Dostarczono do'
+    date: Data
+    links: Linki
+    attachments: Załączniki
+  action:
+    raw: 'Pobierz .eml'
+  dev:
+    marker: dev
+    title: 'Skrzynka deweloperska — nie część aplikacji'
+    intro: 'Narzędzie do rozwoju i testowania, nieobecne w produkcji. Pokazuje wiadomości, które ta aplikacja wysłała, najnowsze na górze; żadna z nich nie opuściła maszyny. Prawdziwi użytkownicy otrzymują swoje w swoich własnych skrzynkach odbiorczych.'
+    purge: 'Opróżnij skrzynkę odbiorczą'
+    purge_confirm: 'Każda wiadomość w skrzynce odbiorczej zostanie usunięta.'
+
+es:
+  empty: 'No hay correo todavía.'
+  not_found: 'Este correo ya no está en la bandeja de entrada.'
+  no_subject: '(sin asunto)'
+  no_name: '(sin nombre)'
+  filter:
+    all: 'Todos los destinatarios'
+  field:
+    from: De
+    to: Para
+    cc: Cc
+    delivered_to: 'Entregado a'
+    date: Fecha
+    links: Enlaces
+    attachments: Adjuntos
+  action:
+    raw: 'Descargar el .eml'
+  dev:
+    marker: dev
+    title: 'Bandeja de entrada de desarrollo — no forma parte de la aplicación'
+    intro: 'Una herramienta de desarrollo y prueba, ausente en producción. Muestra los correos que esta aplicación envió, el más nuevo primero; ninguno salió de la máquina. Los usuarios reales reciben los suyos en su propia bandeja de entrada.'
+    purge: 'Vaciar la bandeja de entrada'
+    purge_confirm: 'Todos los correos en la bandeja de entrada serán eliminados.'
+
+it:
+  empty: 'Nessuna mail ancora.'
+  not_found: 'Questa mail non è più nella casella di posta.'
+  no_subject: '(nessun oggetto)'
+  no_name: '(nessun nome)'
+  filter:
+    all: 'Ogni destinatario'
+  field:
+    from: Da
+    to: A
+    cc: Cc
+    delivered_to: 'Consegnato a'
+    date: Data
+    links: Link
+    attachments: Allegati
+  action:
+    raw: 'Scarica il .eml'
+  dev:
+    marker: dev
+    title: "Casella di posta per sviluppo — non parte dell'applicazione"
+    intro: 'Uno strumento di sviluppo e test, assente in produzione. Mostra le mail inviate da questa applicazione, le più recenti per prime; nessuna di esse ha lasciato la macchina. Gli utenti reali ricevono le loro nella propria casella di posta.'
+    purge: 'Svuota la casella di posta'
+    purge_confirm: 'Ogni mail nella casella di posta sarà eliminata.'
+
+pt_BR:
+  empty: 'Nenhum e-mail ainda.'
+  not_found: 'Este e-mail não está mais na caixa de entrada.'
+  no_subject: '(sem assunto)'
+  no_name: '(sem nome)'
+  filter:
+    all: 'Todos os destinatários'
+  field:
+    from: De
+    to: Para
+    cc: Cc
+    delivered_to: 'Entregue a'
+    date: Data
+    links: Links
+    attachments: Anexos
+  action:
+    raw: 'Baixar o .eml'
+  dev:
+    marker: dev
+    title: 'Caixa de entrada de desenvolvimento — não faz parte do aplicativo'
+    intro: 'Uma ferramenta de desenvolvimento e teste, ausente na produção. Mostra os e-mails que esta aplicação enviou, do mais novo para o mais antigo; nenhum deles saiu da máquina. Usuários reais recebem os seus na própria caixa de entrada.'
+    purge: 'Esvaziar a caixa de entrada'
+    purge_confirm: 'Todo e-mail na caixa de entrada será deletado.'
+
+tr:
+  empty: 'Henüz mail yok.'
+  not_found: 'Bu mail artık posta kutusunda yok.'
+  no_subject: '(konu yok)'
+  no_name: '(isim yok)'
+  filter:
+    all: 'Her alıcı'
+  field:
+    from: Kimden
+    to: Kime
+    cc: Cc
+    delivered_to: 'Gönderildiği yer'
+    date: Tarih
+    links: Bağlantılar
+    attachments: Ekler
+  action:
+    raw: '.eml dosyasını indir'
+  dev:
+    marker: geliştirici
+    title: 'Geliştirme posta kutusu — uygulamanın parçası değil'
+    intro: 'Üretimde bulunmayan bir geliştirme ve test aracı. Bu uygulamanın gönderdiği mailleri gösterir, en yenisi en üstte; hiçbiri makineden çıkmadı. Gerçek kullanıcılar kendi posta kutularında maillerini alır.'
+    purge: 'Posta kutusunu boşalt'
+    purge_confirm: 'Posta kutusundaki her mail silinecek.'
+
+vi:
+  empty: 'Chưa có thư nào.'
+  not_found: 'Thư này không còn trong hộp thư.'
+  no_subject: '(không có tiêu đề)'
+  no_name: '(không có tên)'
+  filter:
+    all: 'Mọi người nhận'
+  field:
+    from: Từ
+    to: Đến
+    cc: Cc
+    delivered_to: 'Đã gửi đến'
+    date: Ngày
+    links: 'Liên kết'
+    attachments: 'Tệp đính kèm'
+  action:
+    raw: 'Tải xuống .eml'
+  dev:
+    marker: dev
+    title: 'Hộp thư phát triển — không phải là một phần của ứng dụng'
+    intro: 'Một công cụ phát triển và thử nghiệm, không có trong môi trường sản xuất. Nó hiển thị các thư mà ứng dụng này đã gửi, mới nhất ở trên cùng; không thư nào đã rời khỏi máy. Người dùng thực nhận thư của họ trong hộp thư của riêng họ.'
+    purge: 'Làm trống hộp thư'
+    purge_confirm: 'Mọi thư trong hộp thư sẽ bị xóa.'
+
+id:
+  empty: 'Belum ada email.'
+  not_found: 'Email ini sudah tidak ada di kotak masuk.'
+  no_subject: '(tidak ada subjek)'
+  no_name: '(tidak ada nama)'
+  filter:
+    all: 'Setiap penerima'
+  field:
+    from: Dari
+    to: Kepada
+    cc: Cc
+    delivered_to: 'Dikirim ke'
+    date: Tanggal
+    links: Tautan
+    attachments: Lampiran
+  action:
+    raw: 'Unduh .eml'
+  dev:
+    marker: dev
+    title: 'Kotak masuk pengembangan — bukan bagian dari aplikasi'
+    intro: 'Alat pengembangan dan pengujian, tidak ada dalam produksi. Ini menunjukkan email yang dikirim aplikasi ini, terbaru terlebih dahulu; tidak ada yang meninggalkan mesin. Pengguna nyata menerima email mereka di kotak masuk mereka sendiri.'
+    purge: 'Kosongkan kotak masuk'
+    purge_confirm: 'Setiap email di kotak masuk akan dihapus.'
+
+nl:
+  empty: 'Nog geen mail.'
+  not_found: 'Deze mail bevindt zich niet meer in de mailbox.'
+  no_subject: '(geen onderwerp)'
+  no_name: '(geen naam)'
+  filter:
+    all: 'Elke ontvanger'
+  field:
+    from: Van
+    to: Aan
+    cc: Cc
+    delivered_to: 'Afgeleverd aan'
+    date: Datum
+    links: Links
+    attachments: Bijlagen
+  action:
+    raw: 'Download de .eml'
+  dev:
+    marker: dev
+    title: 'Ontwikkelingsmailbox — maakt geen deel uit van de applicatie'
+    intro: 'Een ontwikkelings- en testtool, afwezig in productie. Het toont de mails die deze applicatie heeft verzonden, nieuwste eerst; geen van hen heeft de machine verlaten. Echte gebruikers ontvangen hun mails in hun eigen mailbox.'
+    purge: 'Maak de mailbox leeg'
+    purge_confirm: 'Elke mail in de mailbox zal worden verwijderd.'

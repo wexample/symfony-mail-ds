@@ -13,3 +13,79 @@ zh:
 ar:
   page_title: 'صندوق البريد'
   page_icon: 'ph:bold/envelope-simple'
+
+hi:
+  page_title: मेलबॉक्स
+  page_icon: 'ph:bold/envelope-simple'
+
+he:
+  page_title: 'תיבת דואר'
+  page_icon: 'ph:bold/envelope-simple'
+
+fa:
+  page_title: 'صندوق پستی'
+  page_icon: 'ph:bold/envelope-simple'
+
+ur:
+  page_title: 'میل باکس'
+  page_icon: 'ph:bold/envelope-simple'
+
+ja:
+  page_title: メールボックス
+  page_icon: 'ph:bold/envelope-simple'
+
+ko:
+  page_title: 메일함
+  page_icon: 'ph:bold/envelope-simple'
+
+bn:
+  page_title: মেইলবক্স
+  page_icon: 'ph:bold/envelope-simple'
+
+th:
+  page_title: กล่องจดหมาย
+  page_icon: 'ph:bold/envelope-simple'
+
+de:
+  page_title: Postfach
+  page_icon: 'ph:bold/envelope-simple'
+
+fi:
+  page_title: Postilaatikko
+  page_icon: 'ph:bold/envelope-simple'
+
+ru:
+  page_title: 'Почтовый ящик'
+  page_icon: 'ph:bold/envelope-simple'
+
+pl:
+  page_title: 'Skrzynka odbiorcza'
+  page_icon: 'ph:bold/envelope-simple'
+
+es:
+  page_title: 'Bandeja de entrada'
+  page_icon: 'ph:bold/envelope-simple'
+
+it:
+  page_title: 'Casella di posta'
+  page_icon: 'ph:bold/envelope-simple'
+
+pt_BR:
+  page_title: 'Caixa de entrada'
+  page_icon: 'ph:bold/envelope-simple'
+
+tr:
+  page_title: 'Posta Kutusu'
+  page_icon: 'ph:bold/envelope-simple'
+
+vi:
+  page_title: 'Hộp thư'
+  page_icon: 'ph:bold/envelope-simple'
+
+id:
+  page_title: 'Kotak Surat'
+  page_icon: 'ph:bold/envelope-simple'
+
+nl:
+  page_title: Postvak
+  page_icon: 'ph:bold/envelope-simple'
