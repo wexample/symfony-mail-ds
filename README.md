@@ -1,6 +1,6 @@
 # symfony-mail-ds
 
-Version: 2.1.6
+Version: 2.1.7
 
 Design-system screens for symfony-mail: the development mailbox
 
@@ -26,7 +26,7 @@ The suite includes packages for configuration management, file handling, prompts
 - php: >=8.5
 - wexample/symfony-design-system: >=37.0.0
 - wexample/symfony-helpers: >=17.0.0
-- wexample/symfony-loader: >=23.1.0
+- wexample/symfony-loader: >=23.2.0
 - wexample/symfony-mail: >=2.0.0
 
 ## Versioning & Compatibility Policy
