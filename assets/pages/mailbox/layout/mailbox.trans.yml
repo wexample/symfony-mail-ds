@@ -1,5 +1,11 @@
 en:
   empty: No mail yet.
+  body_not_kept: Its body was not kept — a mail carrying a link or a code never is.
+  status:
+    sent: Sent
+    failed: Failed
+    dropped: Not sent, no recipient receives mail
+    pending: Sending interrupted
   not_found: This mail is no longer in the mailbox.
   no_subject: (no subject)
   no_name: (no name)
@@ -11,6 +17,8 @@ en:
     cc: Cc
     delivered_to: Delivered to
     date: Date
+    reply_to: Reply to
+    status: Status
     links: Links
     attachments: Attachments
   action:
@@ -24,6 +32,12 @@ en:
 
 fr:
   empty: "Aucun mail pour l'instant."
+  body_not_kept: "Son contenu n'a pas été conservé — celui d'un mail portant un lien ou un code ne l'est jamais."
+  status:
+    sent: Envoyé
+    failed: Échec
+    dropped: "Non envoyé, aucun destinataire ne reçoit de mail"
+    pending: Envoi interrompu
   not_found: "Ce mail n'est plus dans la boîte."
   no_subject: (sans objet)
   no_name: (sans nom)
@@ -35,6 +49,8 @@ fr:
     cc: Cc
     delivered_to: Remis à
     date: Date
+    reply_to: Répondre à
+    status: Statut
     links: Liens
     attachments: Pièces jointes
   action:
@@ -48,6 +64,12 @@ fr:
 
 zh:
   empty: 还没有邮件。
+  body_not_kept: 邮件内容未保留——包含链接或代码的邮件通常不会保留。
+  status:
+    sent: 已发送
+    failed: 发送失败
+    dropped: 未发送，没有收件人收到邮件
+    pending: 发送中断
   not_found: 这封邮件不再邮箱中。
   no_subject: （无主题）
   no_name: （无发件人）
@@ -59,6 +81,8 @@ zh:
     cc: 抄送
     delivered_to: 投递至
     date: 日期
+    reply_to: 回复
+    status: 状态
     links: 链接
     attachments: 附件
   action:
@@ -72,6 +96,12 @@ zh:
 
 ar:
   empty: 'لا توجد رسائل بعد.'
+  body_not_kept: 'لم يتم الاحتفاظ بمحتواه - البريد الذي يحمل رابطًا أو رمزًا لا يتم الاحتفاظ به أبدًا.'
+  status:
+    sent: 'تم الإرسال'
+    failed: فشل
+    dropped: 'لم يتم الإرسال، لم يستلم أي مستلم البريد'
+    pending: 'تم إيقاف الإرسال'
   not_found: 'هذه الرسالة لم تعد موجودة في صندوق البريد.'
   no_subject: '(بدون موضوع)'
   no_name: '(بدون اسم)'
@@ -83,6 +113,8 @@ ar:
     cc: نسخة
     delivered_to: 'تم التسليم إلى'
     date: التاريخ
+    reply_to: 'الرد على'
+    status: الحالة
     links: الروابط
     attachments: المرفقات
   action:
@@ -96,6 +128,12 @@ ar:
 
 hi:
   empty: 'अभी तक कोई मेल नहीं है।'
+  body_not_kept: 'इसका शरीर नहीं रखा गया — एक मेल जिसमें लिंक या कोड होता है, उसे कभी नहीं रखा जाता।'
+  status:
+    sent: 'भेजा गया'
+    failed: असफल
+    dropped: 'भेजा नहीं गया, कोई प्राप्तकर्ता मेल प्राप्त नहीं करता'
+    pending: 'भेजना बाधित हुआ'
   not_found: 'यह मेल अब मेलबॉक्स में नहीं है।'
   no_subject: '(कोई विषय नहीं)'
   no_name: '(कोई नाम नहीं)'
@@ -107,6 +145,8 @@ hi:
     cc: प्रतिलिपि
     delivered_to: 'डिलीवर किया गया'
     date: तारीख
+    reply_to: 'उत्तर दें'
+    status: स्थिति
     links: लिंक
     attachments: संलग्नक
   action:
@@ -120,6 +160,12 @@ hi:
 
 he:
   empty: 'עדיין אין דואר.'
+  body_not_kept: 'הגוף שלו לא נשמר — דוא״ל שמכיל קישור או קוד אף פעם לא נשמר.'
+  status:
+    sent: נשלח
+    failed: נכשל
+    dropped: 'לא נשלח, לאף נמען לא התקבל דוא״ל'
+    pending: 'שליחה הופסקה'
   not_found: 'דואר זה כבר לא בתיבת הדואר.'
   no_subject: '(אין נושא)'
   no_name: '(אין שם)'
@@ -131,6 +177,8 @@ he:
     cc: עותק
     delivered_to: 'נמסר ל'
     date: תאריך
+    reply_to: 'ענה ל'
+    status: סטטוס
     links: קישורים
     attachments: 'קבצים מצורפים'
   action:
@@ -144,6 +192,12 @@ he:
 
 fa:
   empty: 'هنوز هیچ ایمیلی وجود ندارد.'
+  body_not_kept: 'بدن آن نگهداری نشد - یک ایمیل حاوی لینک یا کد هرگز نگهداری نمی‌شود.'
+  status:
+    sent: 'ارسال شده'
+    failed: ناموفق
+    dropped: 'ارسال نشده، هیچ گیرنده‌ای ایمیل را دریافت نکرد'
+    pending: 'ارسال متوقف شده'
   not_found: 'این ایمیل دیگر در صندوق ورودی نیست.'
   no_subject: '(بدون موضوع)'
   no_name: '(بدون نام)'
@@ -155,6 +209,8 @@ fa:
     cc: 'کپی به'
     delivered_to: 'تحویل به'
     date: تاریخ
+    reply_to: 'پاسخ به'
+    status: وضعیت
     links: لینک‌ها
     attachments: پیوست‌ها
   action:
@@ -168,6 +224,12 @@ fa:
 
 ur:
   empty: 'ابھی کوئی میل نہیں۔'
+  body_not_kept: 'اس کا مواد محفوظ نہیں کیا گیا - ایک میل جس میں لنک یا کوڈ ہوتا ہے کبھی بھی محفوظ نہیں ہوتا۔'
+  status:
+    sent: 'بھیج دیا گیا'
+    failed: ناکام
+    dropped: 'نہیں بھیجا گیا، کوئی وصول کنندہ میل وصول نہیں کرتا'
+    pending: 'بھیجنا روک دیا گیا'
   not_found: 'یہ میل اب میل باکس میں موجود نہیں ہے۔'
   no_subject: '(کوئی مضمون نہیں)'
   no_name: '(کوئی نام نہیں)'
@@ -179,6 +241,8 @@ ur:
     cc: 'سی سی'
     delivered_to: 'پہنچایا گیا'
     date: تاریخ
+    reply_to: 'جواب دیں'
+    status: حیثیت
     links: لنکس
     attachments: منسلکات
   action:
@@ -192,6 +256,12 @@ ur:
 
 ja:
   empty: まだメールはありません。
+  body_not_kept: 'その本文は保持されていません — リンクやコードを含むメールは常に保持されません。'
+  status:
+    sent: 送信済み
+    failed: 失敗しました
+    dropped: 送信されていません、受取人はメールを受け取りません
+    pending: 送信が中断されました
   not_found: このメールはもはや受信トレイにはありません。
   no_subject: (件名なし)
   no_name: (名前なし)
@@ -203,6 +273,8 @@ ja:
     cc: Cc
     delivered_to: 配信先
     date: 日付
+    reply_to: 返信先
+    status: ステータス
     links: リンク
     attachments: 添付ファイル
   action:
@@ -216,6 +288,12 @@ ja:
 
 ko:
   empty: '아직 메일이 없습니다.'
+  body_not_kept: '본문이 보존되지 않았습니다 — 링크나 코드를 포함한 메일은 보존되지 않습니다.'
+  status:
+    sent: 전송됨
+    failed: '전송 실패'
+    dropped: '전송되지 않았습니다, 수신자가 메일을 받지 못했습니다'
+    pending: '전송 중단됨'
   not_found: '이 메일은 더 이상 받은 편지함에 없습니다.'
   no_subject: '(제목 없음)'
   no_name: '(이름 없음)'
@@ -227,6 +305,8 @@ ko:
     cc: 참조
     delivered_to: '배달된 곳'
     date: 날짜
+    reply_to: 회신
+    status: 상태
     links: 링크
     attachments: 첨부파일
   action:

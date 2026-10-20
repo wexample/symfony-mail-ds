@@ -6,7 +6,11 @@
 
     `mailbox_dev` makes it the development mailbox: said so at the toolbar's
     start, with the choice of a recipient and the purge at its end, which then
-    needs `recipient` and `recipients`. -#}
+    needs `recipient` and `recipients`.
+
+    `mailbox_journal` makes it the journal of the mails sent (symfony-mail's
+    Mail): each one's end and reply address among its headers, and a word
+    where its body was not kept. `mailbox_raw: false` leaves the source out. -#}
 {%- extends mailbox_layout|default('@front/layouts/private/layout.html.twig') -%}
 
 {#- The panes are the page: no title over them. -#}
@@ -31,7 +35,7 @@
 {%- endblock -%}
 
 {%- block page_toolbar_right -%}
-    {%- if selected -%}
+    {%- if selected and (mailbox_raw ?? true) -%}
         {{ button_link('ph:bold/download-simple', (mailbox_domain ~ 'action.raw') | trans, path(mailbox_route_raw, { id: selected.id })) }}
     {%- endif -%}
     {%- if mailbox_dev|default(false) -%}
@@ -74,7 +78,9 @@
                 <div class="list-expanded--items">
                     {%- for mail in mails -%}
                         {{ bar(mail.subject ?? (mailbox_domain ~ 'no_subject') | trans, {
-                            icon: mail.attachments is empty ? 'ph:bold/envelope-simple' : 'ph:bold/paperclip',
+                            icon: mailbox_journal|default(false) and mail.status.value in ['failed', 'dropped']
+                                ? 'ph:bold/warning'
+                                : (mail.attachments is empty ? 'ph:bold/envelope-simple' : 'ph:bold/paperclip'),
                             subtitle: mail.recipients | join(', '),
                             meta: date_display(mail.date, 'date_time_short'),
                             href: path(mailbox_route, { id: mail.id, to: recipient|default(null) }),
@@ -99,6 +105,9 @@
             { key: (mailbox_domain ~ 'field.from') | trans, value: selected.from | join(', ') },
             { key: (mailbox_domain ~ 'field.to') | trans, value: selected.to | join(', ') },
         ] -%}
+        {%- if mailbox_journal|default(false) and selected.replyTo is not empty -%}
+            {%- set headers = headers | merge([{ key: (mailbox_domain ~ 'field.reply_to') | trans, value: selected.replyTo | join(', ') }]) -%}
+        {%- endif -%}
         {%- if selected.cc is not empty -%}
             {%- set headers = headers | merge([{ key: (mailbox_domain ~ 'field.cc') | trans, value: selected.cc | join(', ') }]) -%}
         {%- endif -%}
@@ -106,6 +115,14 @@
             { key: (mailbox_domain ~ 'field.delivered_to') | trans, value: selected.recipients | join(', ') },
             { key: (mailbox_domain ~ 'field.date') | trans, value: date_display(selected.date, 'date_time_short'), html: true },
         ]) -%}
+        {%- if mailbox_journal|default(false) -%}
+            {%- set status_tones = { sent: 'success', failed: 'error', dropped: 'neutral', pending: 'warning' } -%}
+            {%- set headers = headers | merge([{
+                key: (mailbox_domain ~ 'field.status') | trans,
+                value: marker(status_tones[selected.status.value], (mailbox_domain ~ 'status.' ~ selected.status.value) | trans, { compact: true }),
+                html: true,
+            }]) -%}
+        {%- endif -%}
         {{ properties(headers, { compact: true }) }}
 
         {%- if selected.html is not null -%}
@@ -116,6 +133,8 @@
             </div>
         {%- elseif selected.text is not null -%}
             <pre class="mailbox--text">{{ selected.text }}</pre>
+        {%- elseif mailbox_journal|default(false) -%}
+            <div class="empty">{{ (mailbox_domain ~ 'body_not_kept') | trans }}</div>
         {%- endif -%}
 
         {%- if selected.links is not empty -%}

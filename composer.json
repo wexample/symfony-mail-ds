@@ -20,7 +20,9 @@
     "wexample/symfony-design-system": ">=37.0.0",
     "wexample/symfony-helpers": ">=17.0.0",
     "wexample/symfony-loader": ">=23.2.0",
-    "wexample/symfony-mail": ">=2.0.0"
+    "wexample/symfony-mail": ">=2.0.0",
+    "symfony/security-http": "^7.4 || ^8.0",
+    "symfony/uid": "^7.4 || ^8.0"
   },
   "repositories": [
     {

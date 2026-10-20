@@ -1,0 +1,8 @@
+{%- extends '@WexampleSymfonyMailDsBundle/pages/mailbox/layout/mailbox.html.twig' -%}
+
+{#- The journal of the mails sent, drawn as a mailbox: no source to download,
+    each one's end beside its headers. -#}
+{%- set mailbox_route = 'mails_index' -%}
+{%- set mailbox_route_html = 'mails_html' -%}
+{%- set mailbox_raw = false -%}
+{%- set mailbox_journal = true -%}

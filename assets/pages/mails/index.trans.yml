@@ -1,0 +1,39 @@
+en:
+  page_title: Sent mails
+  page_icon: ph:bold/paper-plane-tilt
+
+fr:
+  page_title: Mails envoyés
+  page_icon: ph:bold/paper-plane-tilt
+
+zh:
+  page_title: 已发送邮件
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+ar:
+  page_title: 'الرسائل المرسلة'
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+hi:
+  page_title: 'भेजे गए मेल'
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+he:
+  page_title: 'מיילים שנשלחו'
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+fa:
+  page_title: 'ایمیل‌های ارسال شده'
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+ur:
+  page_title: 'بھیجی گئی میلیں'
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+ja:
+  page_title: 送信済みメール
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+ko:
+  page_title: '보낸 편지함'
+  page_icon: 'ph:bold/paper-plane-tilt'
