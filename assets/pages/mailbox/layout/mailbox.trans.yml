@@ -320,6 +320,12 @@ ko:
 
 bn:
   empty: 'আরো কোনো মেইল নেই।'
+  body_not_kept: 'এর শরীর রাখা হয়নি — একটি লিংক বা কোড বহনকারী মেইল কখনও রাখা হয় না।'
+  status:
+    sent: 'পাঠানো হয়েছে'
+    failed: ব্যর্থ
+    dropped: 'পাঠানো হয়নি, কোন প্রাপক মেইল পায়নি'
+    pending: 'পাঠানো বন্ধ হয়েছে'
   not_found: 'এই মেইলটি আর মেইলবক্সে নেই।'
   no_subject: '(বিষয় নেই)'
   no_name: '(নাম নেই)'
@@ -331,6 +337,8 @@ bn:
     cc: সিসি
     delivered_to: 'বিতরণ করা হয়েছে'
     date: তারিখ
+    reply_to: 'প্রত্যুত্তর দিন'
+    status: অবস্থা
     links: লিঙ্কগুলি
     attachments: সংযুক্তি
   action:
@@ -344,6 +352,12 @@ bn:
 
 th:
   empty: ยังไม่มีอีเมล
+  body_not_kept: 'ไม่เก็บเนื้อหา — อีเมลที่มีลิงก์หรือรหัสจะไม่ถูกเก็บไว้'
+  status:
+    sent: ส่งแล้ว
+    failed: ส่งไม่สำเร็จ
+    dropped: 'ไม่ได้ส่ง ไม่มีผู้รับได้รับอีเมล'
+    pending: การส่งถูกขัดจังหวะ
   not_found: อีเมลนี้ไม่มีในกล่องจดหมายอีกต่อไป
   no_subject: (ไม่มีหัวข้อ)
   no_name: (ไม่มีชื่อ)
@@ -355,6 +369,8 @@ th:
     cc: Cc
     delivered_to: จัดส่งถึง
     date: วันที่
+    reply_to: ตอบกลับถึง
+    status: สถานะ
     links: ลิงก์
     attachments: ไฟล์แนบ
   action:
@@ -368,6 +384,12 @@ th:
 
 de:
   empty: 'Noch keine E-Mails.'
+  body_not_kept: 'Der Inhalt wurde nicht gespeichert – eine E-Mail mit einem Link oder einem Code wird niemals gespeichert.'
+  status:
+    sent: Gesendet
+    failed: Fehlgeschlagen
+    dropped: 'Nicht gesendet, kein Empfänger erhält die E-Mail'
+    pending: 'Versand unterbrochen'
   not_found: 'Diese E-Mail befindet sich nicht mehr im Postfach.'
   no_subject: '(kein Betreff)'
   no_name: '(kein Name)'
@@ -379,6 +401,8 @@ de:
     cc: Cc
     delivered_to: 'Zugestellt an'
     date: Datum
+    reply_to: 'Antworten an'
+    status: Status
     links: Links
     attachments: Anhänge
   action:
@@ -392,6 +416,12 @@ de:
 
 fi:
   empty: 'Ei vielä postia.'
+  body_not_kept: 'Sen sisältöä ei säilytetty — sähköpostia, joka sisältää linkin tai koodin, ei koskaan säilytetä.'
+  status:
+    sent: Lähetetty
+    failed: Epäonnistui
+    dropped: 'Ei lähetetty, vastaanottaja ei saa sähköpostia'
+    pending: 'Lähetys keskeytetty'
   not_found: 'Tätä postia ei ole enää postilaatikossa.'
   no_subject: '(ei aihetta)'
   no_name: '(ei nimeä)'
@@ -403,6 +433,8 @@ fi:
     cc: Cc
     delivered_to: Toimitettu
     date: Päivämäärä
+    reply_to: Vastaa
+    status: Tila
     links: Linkit
     attachments: Liitteet
   action:
@@ -416,6 +448,12 @@ fi:
 
 ru:
   empty: 'Почты еще нет.'
+  body_not_kept: 'Его тело не было сохранено — письмо с ссылкой или кодом никогда не сохраняется.'
+  status:
+    sent: Отправлено
+    failed: 'Не удалось'
+    dropped: 'Не отправлено, ни один получатель не получил письмо'
+    pending: 'Отправка прервана'
   not_found: 'Это письмо больше не в почтовом ящике.'
   no_subject: '(без темы)'
   no_name: '(без имени)'
@@ -427,6 +465,8 @@ ru:
     cc: Копия
     delivered_to: 'Доставлено в'
     date: Дата
+    reply_to: 'Ответить на'
+    status: Статус
     links: Ссылки
     attachments: Вложения
   action:
@@ -440,6 +480,12 @@ ru:
 
 pl:
   empty: 'Brak wiadomości.'
+  body_not_kept: 'Jego treść nie została zachowana — wiadomość z linkiem lub kodem nigdy nie jest.'
+  status:
+    sent: Wysłano
+    failed: Niepowodzenie
+    dropped: 'Nie wysłano, żaden odbiorca nie otrzymuje wiadomości'
+    pending: 'Wysyłanie przerwane'
   not_found: 'Ta wiadomość nie znajduje się już w skrzynce odbiorczej.'
   no_subject: '(brak tematu)'
   no_name: '(brak nazwy)'
@@ -451,6 +497,8 @@ pl:
     cc: DW
     delivered_to: 'Dostarczono do'
     date: Data
+    reply_to: 'Odpowiedz na'
+    status: Status
     links: Linki
     attachments: Załączniki
   action:
@@ -464,6 +512,12 @@ pl:
 
 es:
   empty: 'No hay correo todavía.'
+  body_not_kept: 'Su cuerpo no se mantuvo — un correo que lleva un enlace o un código nunca se conserva.'
+  status:
+    sent: Enviado
+    failed: Fallido
+    dropped: 'No enviado, ningún destinatario recibe el correo'
+    pending: 'Envío interrumpido'
   not_found: 'Este correo ya no está en la bandeja de entrada.'
   no_subject: '(sin asunto)'
   no_name: '(sin nombre)'
@@ -475,6 +529,8 @@ es:
     cc: Cc
     delivered_to: 'Entregado a'
     date: Fecha
+    reply_to: 'Responder a'
+    status: Estado
     links: Enlaces
     attachments: Adjuntos
   action:
@@ -488,6 +544,12 @@ es:
 
 it:
   empty: 'Nessuna mail ancora.'
+  body_not_kept: 'Il suo corpo non è stato mantenuto — una mail contenente un link o un codice non lo è mai.'
+  status:
+    sent: Inviato
+    failed: Fallito
+    dropped: 'Non inviato, nessun destinatario riceve la mail'
+    pending: 'Invio interrotto'
   not_found: 'Questa mail non è più nella casella di posta.'
   no_subject: '(nessun oggetto)'
   no_name: '(nessun nome)'
@@ -499,6 +561,8 @@ it:
     cc: Cc
     delivered_to: 'Consegnato a'
     date: Data
+    reply_to: 'Rispondi a'
+    status: Stato
     links: Link
     attachments: Allegati
   action:
@@ -512,6 +576,12 @@ it:
 
 pt_BR:
   empty: 'Nenhum e-mail ainda.'
+  body_not_kept: 'Seu corpo não foi mantido — um e-mail contendo um link ou um código nunca é.'
+  status:
+    sent: Enviado
+    failed: Falhou
+    dropped: 'Não enviado, nenhum destinatário recebe o e-mail'
+    pending: 'Envio interrompido'
   not_found: 'Este e-mail não está mais na caixa de entrada.'
   no_subject: '(sem assunto)'
   no_name: '(sem nome)'
@@ -523,6 +593,8 @@ pt_BR:
     cc: Cc
     delivered_to: 'Entregue a'
     date: Data
+    reply_to: 'Responder a'
+    status: Status
     links: Links
     attachments: Anexos
   action:
@@ -536,6 +608,12 @@ pt_BR:
 
 tr:
   empty: 'Henüz mail yok.'
+  body_not_kept: 'Gövdesi saklanmadı — bir bağlantı veya kod taşıyan bir e-posta asla saklanmaz.'
+  status:
+    sent: Gönderildi
+    failed: Başarısız
+    dropped: 'Gönderilmedi, alıcı e-postayı almadı'
+    pending: 'Gönderim kesildi'
   not_found: 'Bu mail artık posta kutusunda yok.'
   no_subject: '(konu yok)'
   no_name: '(isim yok)'
@@ -547,6 +625,8 @@ tr:
     cc: Cc
     delivered_to: 'Gönderildiği yer'
     date: Tarih
+    reply_to: Yanıtla
+    status: Durum
     links: Bağlantılar
     attachments: Ekler
   action:
@@ -560,6 +640,12 @@ tr:
 
 vi:
   empty: 'Chưa có thư nào.'
+  body_not_kept: 'Nội dung của nó không được giữ lại — một email chứa liên kết hoặc mã thì không bao giờ được giữ lại.'
+  status:
+    sent: 'Đã gửi'
+    failed: 'Gửi không thành công'
+    dropped: 'Không gửi, không có người nhận nào nhận được email'
+    pending: 'Gửi bị ngắt quãng'
   not_found: 'Thư này không còn trong hộp thư.'
   no_subject: '(không có tiêu đề)'
   no_name: '(không có tên)'
@@ -571,6 +657,8 @@ vi:
     cc: Cc
     delivered_to: 'Đã gửi đến'
     date: Ngày
+    reply_to: 'Phản hồi đến'
+    status: 'Trạng thái'
     links: 'Liên kết'
     attachments: 'Tệp đính kèm'
   action:
@@ -584,6 +672,12 @@ vi:
 
 id:
   empty: 'Belum ada email.'
+  body_not_kept: 'Isi tidak disimpan — email yang membawa tautan atau kode tidak pernah disimpan.'
+  status:
+    sent: Terkirim
+    failed: Gagal
+    dropped: 'Tidak terkirim, tidak ada penerima yang menerima email'
+    pending: 'Pengiriman terputus'
   not_found: 'Email ini sudah tidak ada di kotak masuk.'
   no_subject: '(tidak ada subjek)'
   no_name: '(tidak ada nama)'
@@ -595,6 +689,8 @@ id:
     cc: Cc
     delivered_to: 'Dikirim ke'
     date: Tanggal
+    reply_to: 'Balas ke'
+    status: Status
     links: Tautan
     attachments: Lampiran
   action:
@@ -608,6 +704,12 @@ id:
 
 nl:
   empty: 'Nog geen mail.'
+  body_not_kept: 'Het lichaam werd niet bewaard — een e-mail met een link of een code wordt nooit bewaard.'
+  status:
+    sent: Verzonden
+    failed: Mislukt
+    dropped: 'Niet verzonden, geen ontvanger ontvangt e-mail'
+    pending: 'Verzending onderbroken'
   not_found: 'Deze mail bevindt zich niet meer in de mailbox.'
   no_subject: '(geen onderwerp)'
   no_name: '(geen naam)'
@@ -619,6 +721,8 @@ nl:
     cc: Cc
     delivered_to: 'Afgeleverd aan'
     date: Datum
+    reply_to: 'Beantwoorden aan'
+    status: Status
     links: Links
     attachments: Bijlagen
   action:

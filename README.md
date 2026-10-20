@@ -1,11 +1,14 @@
 # symfony-mail-ds
 
-Version: 2.1.7
+Version: 2.2.0
 
-Design-system screens for symfony-mail: the development mailbox
+## The mails sent
+
+`/{_locale}/mails/` (`mails_index`), for `ROLE_ADMIN` in every environment, lists symfony-mail's journal, newest first, drawn with the mailbox's layout (`mailbox_journal: true`, `mailbox_raw: false`): the mails on one side, the one being read on the other, with its `Reply-To`, its status, and its body when it was kept — a contact message — or a word saying it was not. The application links it where its administrator looks, an account menu.
 
 ## Table of Contents
 
+- [The mails sent](#the-mails-sent)
 - [Integration in the Suite](#integration-in-the-suite)
 - [Dependencies](#dependencies)
 - [Versioning & Compatibility Policy](#versioning--compatibility-policy)
@@ -24,10 +27,12 @@ The suite includes packages for configuration management, file handling, prompts
 ## Dependencies
 
 - php: >=8.5
-- wexample/symfony-design-system: >=37.0.0
+- wexample/symfony-design-system: >=38.0.0
 - wexample/symfony-helpers: >=17.0.0
-- wexample/symfony-loader: >=23.2.0
-- wexample/symfony-mail: >=2.0.0
+- wexample/symfony-loader: >=23.3.0
+- wexample/symfony-mail: >=3.0.0
+- symfony/security-http: ^7.4 || ^8.0
+- symfony/uid: ^7.4 || ^8.0
 
 ## Versioning & Compatibility Policy
 

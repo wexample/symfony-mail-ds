@@ -37,3 +37,55 @@ ja:
 ko:
   page_title: '보낸 편지함'
   page_icon: 'ph:bold/paper-plane-tilt'
+
+bn:
+  page_title: 'প্রেরিত মেইলস'
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+th:
+  page_title: อีเมลที่ส่งแล้ว
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+de:
+  page_title: 'Gesendete Nachrichten'
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+fi:
+  page_title: 'Lähetetyt viestit'
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+ru:
+  page_title: 'Отправленные письма'
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+pl:
+  page_title: 'Wysłane wiadomości'
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+es:
+  page_title: 'Correos enviados'
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+it:
+  page_title: 'Posta inviata'
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+pt_BR:
+  page_title: 'Emails enviados'
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+tr:
+  page_title: 'Gönderilen mailler'
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+vi:
+  page_title: 'Thư đã gửi'
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+id:
+  page_title: 'Surat terkirim'
+  page_icon: 'ph:bold/paper-plane-tilt'
+
+nl:
+  page_title: 'Verstuurde e-mails'
+  page_icon: 'ph:bold/paper-plane-tilt'
