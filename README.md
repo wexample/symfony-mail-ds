@@ -1,6 +1,6 @@
 # symfony-mail-ds
 
-Version: 2.2.0
+Version: 2.2.1
 
 ## The mails sent
 
@@ -27,9 +27,9 @@ The suite includes packages for configuration management, file handling, prompts
 ## Dependencies
 
 - php: >=8.5
-- wexample/symfony-design-system: >=38.0.0
-- wexample/symfony-helpers: >=17.0.0
-- wexample/symfony-loader: >=23.3.0
+- wexample/symfony-design-system: >=39.0.0
+- wexample/symfony-helpers: >=18.0.0
+- wexample/symfony-loader: >=24.0.0
 - wexample/symfony-mail: >=3.0.0
 - symfony/security-http: ^7.4 || ^8.0
 - symfony/uid: ^7.4 || ^8.0
