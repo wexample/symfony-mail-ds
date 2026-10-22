@@ -1,67 +1,29 @@
 # symfony-mail-ds
 
-Version: 2.2.2
+Version: 2.2.3
 
-## The mails sent
-
-`/{_locale}/mails/` (`mails_index`), for `ROLE_ADMIN` in every environment, lists symfony-mail's journal, newest first, drawn with the mailbox's layout (`mailbox_journal: true`, `mailbox_raw: false`): the mails on one side, the one being read on the other, with its `Reply-To`, its status, and its body when it was kept — a contact message — or a word saying it was not. The application links it where its administrator looks, an account menu.
+Design-system screens for symfony-mail: the development mailbox
 
 ## Table of Contents
 
-- [The mails sent](#the-mails-sent)
-- [Integration in the Suite](#integration-in-the-suite)
-- [Dependencies](#dependencies)
-- [Versioning & Compatibility Policy](#versioning--compatibility-policy)
-- [License](#license)
-- [About us](#about-us)
-- [Migration Notes](#migration-notes)
+- [Installation](#installation)
 
-## Integration in the Suite
+## Installation
 
-This package is part of the Wexample Suite — a collection of high-quality, modular tools designed to work seamlessly together across multiple languages and environments.
+```php
+// config/bundles.php
+Wexample\SymfonyMailDs\WexampleSymfonyMailDsBundle::class => ['all' => true],
+```
 
-### Related Packages
+With `MAILER_DSN=mailbox://default` (see symfony-mail), the page `/mailbox/` lists the mails the application sent, newest first. It is routed in `dev` and `test` only, and asks for no role: a sign-in link or code is read there before signing in. An application that guards every path opens this one in its `access_control`:
 
-The suite includes packages for configuration management, file handling, prompts, and more. Each package can be used independently or as part of the integrated suite.
+```yaml
+when@dev:
+    security:
+        access_control:
+            - { path: ^/([a-z]{2}(_[A-Z]{2})?/)?mailbox/, roles: PUBLIC_ACCESS }
+```
 
-## Dependencies
+A mail's HTML is served by its own route under a `Content-Security-Policy: sandbox` header and shown in an iframe: it neither wears the application's styles nor runs in its origin.
 
-- php: >=8.5
-- wexample/symfony-design-system: >=39.0.0
-- wexample/symfony-helpers: >=18.0.0
-- wexample/symfony-loader: >=25.0.0
-- wexample/symfony-mail: >=3.0.0
-- symfony/security-http: ^7.4 || ^8.0
-- symfony/uid: ^7.4 || ^8.0
-
-## Versioning & Compatibility Policy
-
-Wexample packages follow **Semantic Versioning** (SemVer):
-
-- **MAJOR**: Breaking changes
-- **MINOR**: New features, backward compatible
-- **PATCH**: Bug fixes, backward compatible
-
-We maintain backward compatibility within major versions and provide clear migration guides for breaking changes.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-Free to use in both personal and commercial projects.
-
-## About us
-
-[Wexample](https://wexample.com) stands as a cornerstone of the digital ecosystem — a collective of seasoned engineers, researchers, and creators driven by a relentless pursuit of technological excellence. More than a media platform, it has grown into a vibrant community where innovation meets craftsmanship, and where every line of code reflects a commitment to clarity, durability, and shared intelligence.
-
-This packages suite embodies this spirit. Trusted by professionals and enthusiasts alike, it delivers a consistent, high-quality foundation for modern development — open, elegant, and battle-tested. Its reputation is built on years of collaboration, refinement, and rigorous attention to detail, making it a natural choice for those who demand both robustness and beauty in their tools.
-
-Wexample cultivates a culture of mastery. Each package, each contribution carries the mark of a community that values precision, ethics, and innovation — a community proud to shape the future of digital craftsmanship.
-
-Built and maintained by [Romain Weeger](https://weeger.io).
-
-## Migration Notes
-
-When upgrading between major versions, refer to the migration guides in the documentation.
-
-Breaking changes are clearly documented with upgrade paths and examples.
+In a menu: `menu_item_collapsible_from_controller(render_pass, 'Wexample\\SymfonyMailDs\\Controller\\Pages')`. Outside dev and test, the route does not exist and the entry is not drawn.
