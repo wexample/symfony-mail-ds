@@ -1,7 +1,7 @@
 {
   "name": "wexample/symfony-mail-ds",
   "description": "Design-system screens for symfony-mail: the development mailbox",
-  "version": "2.2.10",
+  "version": "2.2.11",
   "type": "library",
   "license": "MIT",
   "autoload": {
@@ -17,9 +17,9 @@
   ],
   "require": {
     "php": ">=8.5",
-    "wexample/symfony-design-system": ">=41.0.0",
+    "wexample/symfony-design-system": ">=42.0.0",
     "wexample/symfony-helpers": ">=19.1.0",
-    "wexample/symfony-loader": ">=26.1.0",
+    "wexample/symfony-loader": ">=27.0.0",
     "wexample/symfony-mail": ">=4.0.0",
     "symfony/security-http": "^7.4 || ^8.0",
     "symfony/uid": "^7.4 || ^8.0"
