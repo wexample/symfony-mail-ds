@@ -67,39 +67,36 @@
     {%- endif -%}
 {%- endblock -%}
 
-{#- The mails, newest first: a narrow region before the page's own. -#}
+{#- The mails, newest first: a list read one at a time (list-detail). -#}
 {%- block page_zones_before -%}
-    <div class="zone zone--panel zone--narrow zone--size-7 mailbox--list" {{ zone_state('mailbox.list') }}>
-        {{ component(render_pass, '@WexampleSymfonyDesignSystemBundle/components/zone-resizer') }}
-        <div class="zone zone--scrollable list-expanded">
-            {%- if mails is empty -%}
-                <div class="zone--content empty">{{ (mailbox_domain ~ 'empty') | trans }}</div>
-            {%- else -%}
-                <div class="list-expanded--items">
-                    {%- for mail in mails -%}
-                        {{ bar(mail.subject ?? (mailbox_domain ~ 'no_subject') | trans, {
-                            icon: mailbox_journal|default(false) and mail.status.value in ['failed', 'dropped']
-                                ? 'ph:bold/warning'
-                                : (mail.attachments is empty ? 'ph:bold/envelope-simple' : 'ph:bold/paperclip'),
-                            subtitle: mail.recipients | join(', '),
-                            meta: date_display(mail.date, 'date_time_short'),
-                            href: path(mailbox_route, { id: mail.id, to: recipient|default(null) }),
-                            class: 'list-expanded--item',
-                            attr: {
-                                'data-list-expanded-item': '',
-                                'aria-current': selected and selected.id == mail.id ? 'true' : null,
-                            },
-                        }) }}
-                    {%- endfor -%}
-                </div>
-            {%- endif -%}
-        </div>
-    </div>
+    {%- set mail_items = [] -%}
+    {%- for mail in mails -%}
+        {%- set mail_items = mail_items | merge([{
+            title: mail.subject ?? (mailbox_domain ~ 'no_subject') | trans,
+            icon: mailbox_journal|default(false) and mail.status.value in ['failed', 'dropped']
+                ? 'ph:bold/warning'
+                : (mail.attachments is empty ? 'ph:bold/envelope-simple' : 'ph:bold/paperclip'),
+            subtitle: mail.recipients | join(', '),
+            meta: date_display(mail.date, 'date_time_short'),
+            href: path(mailbox_route, { id: mail.id, to: recipient|default(null) }),
+            current: selected and selected.id == mail.id,
+        }]) -%}
+    {%- endfor -%}
+    {{ component(render_pass, '@WexampleSymfonyDesignSystemBundle/components/list-detail', {
+        items: mail_items,
+        empty: (mailbox_domain ~ 'empty') | trans,
+        state: 'mailbox.list',
+        class: 'mailbox--list',
+    }) }}
 {%- endblock -%}
 
 {#- The mail being read: the page's own region, at the reading measure. -#}
 {%- block page_body -%}
     {%- if selected -%}
+        {{ include('@WexampleSymfonyDesignSystemBundle/components/list-detail/list-detail-back.html.twig', {
+            href: path(mailbox_route, { to: recipient|default(null) }),
+            label: (mailbox_domain ~ 'back') | trans,
+        }) }}
         <h2 class="mailbox--subject">{{ selected.subject ?? (mailbox_domain ~ 'no_subject') | trans }}</h2>
         {%- set headers = [
             { key: (mailbox_domain ~ 'field.from') | trans, value: selected.from | join(', ') },

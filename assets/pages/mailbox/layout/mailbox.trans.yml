@@ -1,5 +1,6 @@
 en:
   empty: No mail yet.
+  back: Mails
   body_not_kept: Its body was not kept — a mail carrying a link or a code never is.
   status:
     sent: Sent
@@ -32,6 +33,7 @@ en:
 
 fr:
   empty: "Aucun mail pour l'instant."
+  back: Mails
   body_not_kept: "Son contenu n'a pas été conservé — celui d'un mail portant un lien ou un code ne l'est jamais."
   status:
     sent: Envoyé
@@ -64,6 +66,7 @@ fr:
 
 zh:
   empty: 还没有邮件。
+  back: Mails
   body_not_kept: 邮件内容未保留——包含链接或代码的邮件通常不会保留。
   status:
     sent: 已发送
@@ -96,6 +99,7 @@ zh:
 
 ar:
   empty: 'لا توجد رسائل بعد.'
+  back: Mails
   body_not_kept: 'لم يتم الاحتفاظ بمحتواه - البريد الذي يحمل رابطًا أو رمزًا لا يتم الاحتفاظ به أبدًا.'
   status:
     sent: 'تم الإرسال'
@@ -128,6 +132,7 @@ ar:
 
 hi:
   empty: 'अभी तक कोई मेल नहीं है।'
+  back: Mails
   body_not_kept: 'इसका शरीर नहीं रखा गया — एक मेल जिसमें लिंक या कोड होता है, उसे कभी नहीं रखा जाता।'
   status:
     sent: 'भेजा गया'
@@ -160,6 +165,7 @@ hi:
 
 he:
   empty: 'עדיין אין דואר.'
+  back: Mails
   body_not_kept: 'הגוף שלו לא נשמר — דוא״ל שמכיל קישור או קוד אף פעם לא נשמר.'
   status:
     sent: נשלח
@@ -192,6 +198,7 @@ he:
 
 fa:
   empty: 'هنوز هیچ ایمیلی وجود ندارد.'
+  back: Mails
   body_not_kept: 'بدن آن نگهداری نشد - یک ایمیل حاوی لینک یا کد هرگز نگهداری نمی‌شود.'
   status:
     sent: 'ارسال شده'
@@ -224,6 +231,7 @@ fa:
 
 ur:
   empty: 'ابھی کوئی میل نہیں۔'
+  back: Mails
   body_not_kept: 'اس کا مواد محفوظ نہیں کیا گیا - ایک میل جس میں لنک یا کوڈ ہوتا ہے کبھی بھی محفوظ نہیں ہوتا۔'
   status:
     sent: 'بھیج دیا گیا'
@@ -256,6 +264,7 @@ ur:
 
 ja:
   empty: まだメールはありません。
+  back: Mails
   body_not_kept: 'その本文は保持されていません — リンクやコードを含むメールは常に保持されません。'
   status:
     sent: 送信済み
@@ -288,6 +297,7 @@ ja:
 
 ko:
   empty: '아직 메일이 없습니다.'
+  back: Mails
   body_not_kept: '본문이 보존되지 않았습니다 — 링크나 코드를 포함한 메일은 보존되지 않습니다.'
   status:
     sent: 전송됨
@@ -320,6 +330,7 @@ ko:
 
 bn:
   empty: 'আরো কোনো মেইল নেই।'
+  back: Mails
   body_not_kept: 'এর শরীর রাখা হয়নি — একটি লিংক বা কোড বহনকারী মেইল কখনও রাখা হয় না।'
   status:
     sent: 'পাঠানো হয়েছে'
@@ -352,6 +363,7 @@ bn:
 
 th:
   empty: ยังไม่มีอีเมล
+  back: Mails
   body_not_kept: 'ไม่เก็บเนื้อหา — อีเมลที่มีลิงก์หรือรหัสจะไม่ถูกเก็บไว้'
   status:
     sent: ส่งแล้ว
@@ -384,6 +396,7 @@ th:
 
 de:
   empty: 'Noch keine E-Mails.'
+  back: Mails
   body_not_kept: 'Der Inhalt wurde nicht gespeichert – eine E-Mail mit einem Link oder einem Code wird niemals gespeichert.'
   status:
     sent: Gesendet
@@ -416,6 +429,7 @@ de:
 
 fi:
   empty: 'Ei vielä postia.'
+  back: Mails
   body_not_kept: 'Sen sisältöä ei säilytetty — sähköpostia, joka sisältää linkin tai koodin, ei koskaan säilytetä.'
   status:
     sent: Lähetetty
@@ -448,6 +462,7 @@ fi:
 
 ru:
   empty: 'Почты еще нет.'
+  back: Mails
   body_not_kept: 'Его тело не было сохранено — письмо с ссылкой или кодом никогда не сохраняется.'
   status:
     sent: Отправлено
@@ -480,6 +495,7 @@ ru:
 
 pl:
   empty: 'Brak wiadomości.'
+  back: Mails
   body_not_kept: 'Jego treść nie została zachowana — wiadomość z linkiem lub kodem nigdy nie jest.'
   status:
     sent: Wysłano
@@ -512,6 +528,7 @@ pl:
 
 es:
   empty: 'No hay correo todavía.'
+  back: Mails
   body_not_kept: 'Su cuerpo no se mantuvo — un correo que lleva un enlace o un código nunca se conserva.'
   status:
     sent: Enviado
@@ -544,6 +561,7 @@ es:
 
 it:
   empty: 'Nessuna mail ancora.'
+  back: Mails
   body_not_kept: 'Il suo corpo non è stato mantenuto — una mail contenente un link o un codice non lo è mai.'
   status:
     sent: Inviato
@@ -576,6 +594,7 @@ it:
 
 pt_BR:
   empty: 'Nenhum e-mail ainda.'
+  back: Mails
   body_not_kept: 'Seu corpo não foi mantido — um e-mail contendo um link ou um código nunca é.'
   status:
     sent: Enviado
@@ -608,6 +627,7 @@ pt_BR:
 
 tr:
   empty: 'Henüz mail yok.'
+  back: Mails
   body_not_kept: 'Gövdesi saklanmadı — bir bağlantı veya kod taşıyan bir e-posta asla saklanmaz.'
   status:
     sent: Gönderildi
@@ -640,6 +660,7 @@ tr:
 
 vi:
   empty: 'Chưa có thư nào.'
+  back: Mails
   body_not_kept: 'Nội dung của nó không được giữ lại — một email chứa liên kết hoặc mã thì không bao giờ được giữ lại.'
   status:
     sent: 'Đã gửi'
@@ -672,6 +693,7 @@ vi:
 
 id:
   empty: 'Belum ada email.'
+  back: Mails
   body_not_kept: 'Isi tidak disimpan — email yang membawa tautan atau kode tidak pernah disimpan.'
   status:
     sent: Terkirim
@@ -704,6 +726,7 @@ id:
 
 nl:
   empty: 'Nog geen mail.'
+  back: Mails
   body_not_kept: 'Het lichaam werd niet bewaard — een e-mail met een link of een code wordt nooit bewaard.'
   status:
     sent: Verzonden

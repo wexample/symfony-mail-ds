@@ -1,8 +1,5 @@
 // A mailbox: the mails on one side, the one being read on the other.
-@use '@wexample/symfony-design-system/components/list-expanded/list-expanded';
-@use '@wexample/symfony-design-system/components/bar/bar';
 @use '@wexample/symfony-design-system/components/document-embed/document-embed';
-@use '@wexample/symfony-design-system/components/zone-resizer/zone-resizer';
 
 .mailbox--subject {
   margin: 0;
