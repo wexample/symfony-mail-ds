@@ -1,6 +1,6 @@
 # symfony-mail-ds
 
-Version: 2.2.20
+Version: 2.2.21
 
 Design-system screens for symfony-mail: the development mailbox
 
